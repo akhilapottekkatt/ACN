@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Prompt user for directory
+echo "Enter the directory to search and delete empty files:"
+read dir
+
+# Check if the directory exists
+if [ ! -d "$dir" ]; then
+    echo "Directory does not exist."
+    exit 1
+fi
+
+# Find and delete empty files in the directory
+find "$dir" -type f -empty -exec rm -f {} \;
+
+echo "Empty files deleted in '$dir'."
+
+
+
+
+
