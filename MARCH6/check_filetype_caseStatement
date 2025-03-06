@@ -1,0 +1,27 @@
+#!/bin/bash
+
+echo "enter the file name"
+read file
+if [! -f "$file" ]; then
+        echo "the file dose not exist " 
+        exit 1
+fi
+case "$file" in 
+        *.txt)
+                echo "its a text file."
+                ;;
+        
+        *.jpeg | *.jpg)
+                echo "it is a image file"
+                ;;
+        *.sh)
+                echo "it is a shell scrpt file"
+                ;;
+        *.pdf)
+                echo "its a pdf file"
+                ;;
+        *)
+                echo "unknown file "
+                ;;
+esac
+
