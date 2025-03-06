@@ -1,0 +1,5 @@
+#!/bin/bash
+echo "enter the file name: "
+read i
+echo "no of lines in $i file"
+wc -l $i
