@@ -1,0 +1,35 @@
+#!/bin/bash
+
+read -p "Enter the number of elements: " n
+
+
+declare -a arr
+
+
+echo "Enter the elements:"
+for ((i = 0; i < n; i++)); do
+    read arr[i]
+done
+
+
+echo "The array elements are:"
+for element in "${arr[@]}"; do
+    echo "$element"
+done
+~                                                                               
+~                                                                               
+~   
+---------------------------------------------------------------------------------
+output
+[mca@localhost ~]$ vi arrayelement.sh
+[mca@localhost ~]$ chmod +x arrayelement.sh
+[mca@localhost ~]$ ./arrayelement.sh
+Enter the number of elements: 5
+Enter the elements:
+1 2 3 4 5
+
+
+
+
+The array elements are:
+1 2 3 4 5
