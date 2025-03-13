@@ -1,0 +1,9 @@
+calculate_area() {
+    echo "Enter the radius of the circle: "
+    read r
+    area=$(echo "3.14 * $r * $r" | bc)
+    echo "Area of the circle = $area"
+}
+
+# Call the function
+calculate_area
