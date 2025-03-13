@@ -1,1 +1,47 @@
+#!/bin/bash
+
+# Function to perform arithmetic operations
+perform_operation() {
+    echo "Select operation:"
+    echo "1. Add"
+    echo "2. Subtract"
+    echo "3. Multiply"
+    echo "4. Divide"
+    read -p "Enter your choice (1/2/3/4): " choice
+    
+    # Read two numbers from the user
+    read -p "Enter first number: " num1
+    read -p "Enter second number: " num2
+    
+    # Perform the selected operation using case (switch)
+    case $choice in
+        1)
+            result=$((num1 + num2))
+            echo "Result: $num1 + $num2 = $result"
+            ;;
+        2)
+            result=$((num1 - num2))
+            echo "Result: $num1 - $num2 = $result"
+            ;;
+        3)
+            result=$((num1 * num2))
+            echo "Result: $num1 * $num2 = $result"
+            ;;
+        4)
+            # Check if the second number is zero for division
+            if [ $num2 -eq 0 ]; then
+                echo "Error: Division by zero is not allowed."
+            else
+                result=$(echo "scale=2; $num1 / $num2" | bc)
+                echo "Result: $num1 / $num2 = $result"
+            fi
+            ;;
+        *)
+            echo "Invalid choice. Please choose a valid operation (1/2/3/4)."
+            ;;
+    esac
+}
+
+# Call the function to perform operations
+perform_operation
 
