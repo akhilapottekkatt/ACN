@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "enter the string to check palindrom nor not"
+read string
+revers = $(echo "$string" | rev)
+echo "$revers"
+if [$string == $reverse]; then
+        echo "the string is palindrom"
+else
+        echo"not palindrom"
+
+fi
