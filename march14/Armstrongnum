@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Function to check if a number is an Armstrong number
+is_armstrong() {
+    num=$1
+    # Get the length of the number (number of digits)
+    len=${#num}
+    sum=0
+    temp=$num
+    
+    # Loop through each digit
+    while [ $temp -gt 0 ]; do
+        digit=$((temp % 10))
+        # Add the digit raised to the power of 'len' to sum
+        sum=$((sum + digit**len))
+        temp=$((temp / 10))
+    done
+    
+    # Check if the sum equals the original number
+    if [ $sum -eq $num ]; then
+        echo "$num is an Armstrong number"
+    else
+        echo "$num is not an Armstrong number"
+    fi
+}
+
+# Take input from the user
+echo "Enter a number: "
+read num
+
+# Call the function
+is_armstrong $num
