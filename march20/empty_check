@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "Enter the file:"
+read file
+
+if [ -z "$file"]; then
+        echo "$file is empty"
+else
+        echo "$file is not empty"
+
+fi
+
+
+
+
