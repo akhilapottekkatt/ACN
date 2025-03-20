@@ -1,0 +1,19 @@
+#!/bin/bash
+
+echo "Enter the file:"
+read file
+
+# Check if the file has both read and write permissions
+if [ -r "$file" ] && [ -w "$file" ]; then
+    echo "$file has both read and write permissions."
+
+    # Check if the file has read permission
+    if [ -r "$file" ]; then
+        echo "$file has read permission."
+    else
+        echo "$file does not have read permission."
+    fi
+
+else
+    echo "$file does not have read or write permission."
+fi
