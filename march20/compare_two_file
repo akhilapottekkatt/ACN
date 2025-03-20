@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "Enter the file:"
+read file
+
+echo "Enter the file:"
+read file1
+
+if cmp -s "$file" "$file1"; then
+        echo "the both files are sam,e"
+else
+        echo "not same"
+fi
