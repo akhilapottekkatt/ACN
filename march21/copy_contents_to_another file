@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo "enter the file contents from:"
+read file
+echo "enter the file to  copy:"
+read file1
+cp $file $file1
+echo "contents copied to $file1"
+
+
+
+
+
+
