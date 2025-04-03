@@ -1,0 +1,37 @@
+!/bin/bash
+
+
+        echo "enter your the file to check"
+        read file
+        echo "enter the options 1:delete perticular line 2:delete line from range 3:3:delete last line 4: dlecte blank line"
+        read i
+        case $i in
+                1)
+                        echo "enter the line number"
+                        read l
+                        sed -i "${l}d" "$file"
+                        echo "deleted the $l the line"
+                        ;;
+                2)
+                        echo "enter the range of line"
+                        echo "range start from"
+                        read f
+                        echo "range till"
+                        read e
+                        sed -i 'f,ed' $file
+                        echo "deleted the line"
+
+                        ;;
+
+
+                3)
+                        echo "delete last line"
+                        ;;
+
+
+
+
+                 4)
+                        sed -i '/^$/d' "$file"
+                        ;;
+        esac
