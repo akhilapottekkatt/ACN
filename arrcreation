@@ -1,0 +1,29 @@
+#!/bin/bash
+
+sed "5,10d" a.txt
+
+declare -a arr
+for (( i=0; i< 5; i++ ))
+do
+        read -p  "enter elements: " arr[i]
+done
+
+
+
+
+
+
+
+
+len=${#arr}
+
+
+
+
+
+for (( i=0; i<=len; i++ ))
+
+do
+        echo "${arr[i]}"
+done
+~        
